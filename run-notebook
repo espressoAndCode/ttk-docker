@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+image=chgarth/paraview-notebook-ttk:latest
+
+docker run              \
+  -it                   \
+  --rm                  \
+  -p 8888:8888          \
+  -v "${HOME}:${HOME}"  \
+  --user ${UID}         \
+  --workdir "${PWD}"	\
+  -e HOME=${HOME}	\
+  $@			\
+  ${image}              \
+  jupyter notebook
