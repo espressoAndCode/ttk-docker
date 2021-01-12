@@ -1,5 +1,4 @@
 FROM ubuntu:focal
-LABEL maintainer="Christoph Garth <garth@cs.uni-kl.de>"
 
 ENV  DEBIAN_FRONTEND=noninteractive
 COPY build/_helper.sh /root/

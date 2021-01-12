@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+docker run              \
+  -it                   \
+  --rm                  \
+  -p 11111:11111        \
+  -v "${PWD}:/home/`whoami`/"  \
+  --user ${UID}         \
+  topologytoolkit/ttk:5.6.1-master
